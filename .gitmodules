@@ -1,0 +1,3 @@
+[submodule "src/VaporEngine/vendor/spdlog"]
+	path = src/VaporEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog

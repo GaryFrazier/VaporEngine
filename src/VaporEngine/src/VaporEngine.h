@@ -3,6 +3,7 @@
 // For use by Vapor Engine applications
 
 #include "VaporEngine/Application.h"
+#include "VaporEngine/Log.h"
 #include <stdio.h>
 
 // -----------Entry Point -----------------------

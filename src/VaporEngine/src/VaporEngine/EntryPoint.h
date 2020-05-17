@@ -7,7 +7,10 @@
 
 	int main(int argc, char** argv)
 	{
-		printf("Welcome to V A P O R E N G I N E\n");
+		VaporEngine::Log::Init();
+		VE_CORE_INFO("Welcome to V A P O R E N G I N E");
+		VE_INFO("Welcome to V A P O R W O R L D");
+
 		auto app = VaporEngine::CreateApplication();
 		app->Run();
 		delete app;

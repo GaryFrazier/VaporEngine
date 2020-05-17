@@ -14,9 +14,13 @@
     <ClInclude Include="src\VaporEngine\Application.h" />
     <ClInclude Include="src\VaporEngine.h" />
     <ClInclude Include="src\VaporEngine\EntryPoint.h" />
+    <ClInclude Include="src\VaporEngine\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\VaporEngine\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VaporEngine\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
