@@ -1,4 +1,7 @@
 [submodule "src/VaporEngine/vendor/spdlog"]
-	path = src/VaporEngine/vendor/spdlog
+	path = VaporEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
 
+[submodule "VaporEngine/vendor/GLFW"]
+	path = VaporEngine/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

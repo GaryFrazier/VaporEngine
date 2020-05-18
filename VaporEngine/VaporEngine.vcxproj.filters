@@ -35,6 +35,8 @@
       <Filter>VaporEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\vepch.h" />
+    <ClInclude Include="src\VaporEngine\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\VaporEngine\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>VaporEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\vepch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
