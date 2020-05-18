@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="VaporEngine">
+      <UniqueIdentifier>{4338F097-AFED-688D-38E2-6264A4965F91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VaporEngine\Events">
+      <UniqueIdentifier>{C79A3151-B37E-F2A6-1CDF-ECF908E2DC28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\VaporEngine.h" />
+    <ClInclude Include="src\VaporEngine\Application.h">
+      <Filter>VaporEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VaporEngine\Core.h">
+      <Filter>VaporEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VaporEngine\EntryPoint.h">
+      <Filter>VaporEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VaporEngine\Events\ApplicationEvent.h">
+      <Filter>VaporEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VaporEngine\Events\Event.h">
+      <Filter>VaporEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VaporEngine\Events\KeyEvent.h">
+      <Filter>VaporEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VaporEngine\Events\MouseEvent.h">
+      <Filter>VaporEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VaporEngine\Log.h">
+      <Filter>VaporEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vepch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\VaporEngine\Application.cpp">
+      <Filter>VaporEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VaporEngine\Log.cpp">
+      <Filter>VaporEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vepch.cpp" />
+  </ItemGroup>
+</Project>
