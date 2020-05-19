@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "VaporEngine/vendor/GLFW/include"
+IncludeDir["GLAD"] = "VaporEngine/vendor/GLAD/include"
 
 include "VaporEngine/vendor/GLFW"
+include "VaporEngine/vendor/GLAD"
 
 project "VaporEngine"
     location "VaporEngine"
@@ -38,18 +40,20 @@ project "VaporEngine"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.GLAD}"
     }
 
     links
     {
         "GLFW",
+        "GLAD",
         "opengl32.lib"
     }
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "Off"
+        staticruntime "On"
         systemversion "10.0.18362.0"
 
         defines
@@ -105,7 +109,7 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "Off"
+        staticruntime "On"
         systemversion "latest"
 
         defines

@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "VaporEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "VaporEngine/vendor/Glad/include"
 
 include "VaporEngine/vendor/GLFW"
+include "VaporEngine/vendor/Glad"
 
 project "VaporEngine"
     location "VaporEngine"
@@ -38,24 +40,27 @@ project "VaporEngine"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
+        staticruntime "Off"
         systemversion "10.0.18362.0"
 
         defines
         {
             "VE_BUILD_DLL",
-            "VE_PLATFORM_WINDOWS"
+            "VE_PLATFORM_WINDOWS",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
@@ -65,14 +70,17 @@ project "VaporEngine"
 
     filter "configurations:Debug"
         defines "VE_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "VE_RELEASE"
+        buildoptions "/MD"
         symbols "On"
     
     filter "configurations:Dist"
         defines "VE_DIST"
+        buildoptions "/MD"
         symbols "On"
 
 project "Sandbox"
@@ -102,7 +110,7 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
+        staticruntime "Off"
         systemversion "latest"
 
         defines
@@ -112,12 +120,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "VE_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "VE_RELEASE"
+        buildoptions "/MD"
         symbols "On"
     
     filter "configurations:Dist"
         defines "VE_DIST"
+        buildoptions "/MD"
         symbols "On"

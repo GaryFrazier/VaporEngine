@@ -3,7 +3,7 @@
 #include "Application.h"
 #include "VaporEngine/Events/ApplicationEvent.h"
 #include "VaporEngine/Log.h"
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace VaporEngine
 {

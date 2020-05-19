@@ -3,6 +3,7 @@
 #include "VaporEngine/Events/KeyEvent.h"
 #include "VaporEngine/Events/MouseEvent.h"
 #include "VaporEngine/Events/ApplicationEvent.h"
+#include "glad/glad.h"
 
 namespace VaporEngine
 {
@@ -50,6 +51,11 @@ namespace VaporEngine
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		//initialize glad
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		VE_CORE_ASSERT(status, "Failed to initialize Glad!");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
