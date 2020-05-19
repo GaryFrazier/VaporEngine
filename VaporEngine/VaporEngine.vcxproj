@@ -83,7 +83,7 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -105,7 +105,7 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -127,7 +127,7 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -150,6 +150,8 @@
     <ClInclude Include="src\VaporEngine\Events\Event.h" />
     <ClInclude Include="src\VaporEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\VaporEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\VaporEngine\Layer.h" />
+    <ClInclude Include="src\VaporEngine\LayerStack.h" />
     <ClInclude Include="src\VaporEngine\Log.h" />
     <ClInclude Include="src\VaporEngine\Window.h" />
     <ClInclude Include="src\vepch.h" />
@@ -157,6 +159,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\VaporEngine\Application.cpp" />
+    <ClCompile Include="src\VaporEngine\Layer.cpp" />
+    <ClCompile Include="src\VaporEngine\LayerStack.cpp" />
     <ClCompile Include="src\VaporEngine\Log.cpp" />
     <ClCompile Include="src\vepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

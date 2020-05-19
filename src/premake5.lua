@@ -49,7 +49,7 @@ project "VaporEngine"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
+        staticruntime "Off"
         systemversion "10.0.18362.0"
 
         defines
@@ -65,14 +65,17 @@ project "VaporEngine"
 
     filter "configurations:Debug"
         defines "VE_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "VE_RELEASE"
+        buildoptions "/MD"
         symbols "On"
     
     filter "configurations:Dist"
         defines "VE_DIST"
+        buildoptions "/MD"
         symbols "On"
 
 project "Sandbox"
@@ -102,7 +105,7 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
+        staticruntime "Off"
         systemversion "latest"
 
         defines
@@ -112,12 +115,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "VE_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "VE_RELEASE"
+        buildoptions "/MD"
         symbols "On"
     
     filter "configurations:Dist"
         defines "VE_DIST"
+        buildoptions "/MD"
         symbols "On"
