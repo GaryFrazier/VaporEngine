@@ -5,3 +5,6 @@
 [submodule "VaporEngine/vendor/GLFW"]
 	path = VaporEngine/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "VaporEngine/vendor/imgui"]
+	path = VaporEngine/vendor/imgui
+	url = https://github.com/GaryFrazier/imgui
