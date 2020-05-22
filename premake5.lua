@@ -1,6 +1,6 @@
 workspace "VaporEngine"
     architecture "x64"
-
+    startproject "Sandbox"
     configurations
     {
         "Debug",
@@ -17,9 +17,12 @@ IncludeDir["GLFW"] = "VaporEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "VaporEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "VaporEngine/vendor/imgui"
 
-include "VaporEngine/vendor/GLFW"
-include "VaporEngine/vendor/Glad"
-include "VaporEngine/vendor/imgui"
+group "Dependencies"
+    include "VaporEngine/vendor/GLFW"
+    include "VaporEngine/vendor/Glad"
+    include "VaporEngine/vendor/imgui"
+
+group ""
 
 project "VaporEngine"
     location "VaporEngine"
@@ -58,7 +61,7 @@ project "VaporEngine"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "Off"
-        systemversion "10.0.18362.0"
+        systemversion "latest"
 
         defines
         {
@@ -69,22 +72,22 @@ project "VaporEngine"
 
         postbuildcommands
         {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+            ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
         }
 
     filter "configurations:Debug"
         defines "VE_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
     
     filter "configurations:Release"
         defines "VE_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         symbols "On"
     
     filter "configurations:Dist"
         defines "VE_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         symbols "On"
 
 project "Sandbox"
@@ -124,15 +127,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "VE_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
     
     filter "configurations:Release"
         defines "VE_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         symbols "On"
     
     filter "configurations:Dist"
         defines "VE_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         symbols "On"
