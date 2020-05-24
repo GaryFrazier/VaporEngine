@@ -6,6 +6,10 @@
 #include "VaporEngine/Log.h"
 #include "VaporEngine/Layer.h"
 #include "VaporEngine/ImGui/ImGuiLayer.h"
+#include "VaporEngine/Input.h"
+
+#include "VaporEngine/MouseButtonCodes.h"
+#include "VaporEngine/KeyCodes.h"
 
 // -----------Entry Point -----------------------
 

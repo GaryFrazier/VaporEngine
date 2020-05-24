@@ -11,12 +11,16 @@ public:
 
 	void OnUpdate() override
 	{
-		VE_INFO("ExampleLayer::Update");
+
 	}
 
 	void OnEvent(VaporEngine::Event& event) override
 	{
-		VE_TRACE("{0}", event);
+		if (event.GetEventType() == VaporEngine::EventType::KeyPressed)
+		{
+			VaporEngine::KeyPressedEvent& e = (VaporEngine::KeyPressedEvent&)event;
+			VE_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 

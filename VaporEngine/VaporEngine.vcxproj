@@ -142,6 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\VaporEngine.h" />
     <ClInclude Include="src\VaporEngine\Application.h" />
@@ -152,14 +153,18 @@
     <ClInclude Include="src\VaporEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\VaporEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\VaporEngine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\VaporEngine\Input.h" />
+    <ClInclude Include="src\VaporEngine\KeyCodes.h" />
     <ClInclude Include="src\VaporEngine\Layer.h" />
     <ClInclude Include="src\VaporEngine\LayerStack.h" />
     <ClInclude Include="src\VaporEngine\Log.h" />
+    <ClInclude Include="src\VaporEngine\MouseButtonCodes.h" />
     <ClInclude Include="src\VaporEngine\Window.h" />
     <ClInclude Include="src\vepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\VaporEngine\Application.cpp" />
     <ClCompile Include="src\VaporEngine\ImGui\ImGuiLayer.cpp" />
