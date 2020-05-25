@@ -5,6 +5,8 @@
 #include "VaporEngine/Events/Event.h"
 #include "VaporEngine/LayerStack.h"
 
+#include "VaporEngine/ImGui/ImGuiLayer.h"
+
 namespace VaporEngine 
 {
 	class VAPORENGINE_API Application
@@ -26,6 +28,7 @@ namespace VaporEngine
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
